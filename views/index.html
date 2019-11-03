@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+</head>
+<body>
+    <div class="wrapper">
+
+        <!-- The Modal -->
+        <div id="myModal" class="modal">
+                <!-- Modal content -->
+                <form class="modal-content">
+                    <div class="md-left">
+                        <div class="underline">
+                            <p>Contact us</p>
+                        </div>
+                        <input type="text" id="subject" placeholder="Subject">
+                        <input type="email" id="email" placeholder="Email">
+                    </div>
+                    <div class="md-right">
+                        <span class="close">&times;</span>
+                        <textarea name="text" cols="50" rows="13"id="text" placeholder="Start writing.."></textarea>
+                        <input type="submit" id="submit" value="Submit">
+                    </div>
+                    
+                </form> 
+        </div>
+
+        <div class="left-container">
+            <!-- NAV Square -->
+<!-- 
+            <div class="nav-square">    
+                <a id="contact" >CONTACT</a> 
+            </div> -->
+            <!-- CENTER Container -->
+            <div class="left-center">
+                <!-- MAIN IMG -->
+                <!-- Quote -->
+                <!-- img - yellow dote -->
+              
+                <img src="images/blur-communication-computer-2148217.jpg" alt="content" class="main-picture">
+                <div class="inside-text">
+                    <p>Roman Uliashyn <span><img src="images/eclipse.png" alt="dote"></span>Idea should be implement with passion</p>
+                </div>
+            </div>
+            <div class="left-footer">
+                <p>The Best Business Solution</p>
+                <div class="team-quote">
+                    <p >We know</p>
+                    <p class="colorline">What matter..</p>
+                </div>
+                
+            </div>
+        </div>
+        <div class="right-container">
+            
+            <div class="right-center">
+                <p class="title">Portfolio</p>
+                <div class="work-list">
+                    <div class="card" id="bg1">
+                        <a href="https://tinkoandko.com" target="_blank">Building Company</a>
+                    </div>
+                    <div class="card" id="bg2">
+                            <a href="http://shop.electroperedachi.com" target="_blank">Merch Shop</a>
+                    </div>
+                    <div class="card" id="bg3">
+                            <a href="http://eu.ewigol.com.pl/eu.html" target="_blank">Landing Page</a>
+                    </div>
+
+                </div>
+            </div>
+            <div class="right-footer">
+                <div class="underline">
+                    <p>Vision & LifeStyle</p>
+                </div>
+               <p>Areas of activity:</p>
+               <ul>
+                    <li><span><img src="images/eclipse.png" alt="dote"></span> IT</li>
+                    <li><span><img src="images/eclipse.png" alt="dote"></span> Business</li>
+                    <li><span><img src="images/eclipse.png" alt="dote"></span> Marketing</li>
+                </ul>
+                <div class="in-footer">
+                    <div class="footer">
+                        <a href="https://www.linkedin.com/in/roman-uliashyn/" target="_blank">Ln</a>
+                        <a href="https://www.facebook.com/profile.php?id=100009076019860" target="_blank">Fb</a>
+                        <a href="https://www.instagram.com/jackromchik/" target="_blank">In</a>
+                        <a href="https://github.com/UliashynRoman" target="_blank">Git</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Jqr CDN -->
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+        function validateEmail(email) {
+        var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+            return re.test(email);
+        }
+        // TODO:
+        $('form').on('submit' , (e) => {
+            e.preventDefault();
+
+            console.log("Nice");
+            const email = $('#email').val().trim();
+            const subject = $('#subject').val().trim();
+            const text = $('#text').val().trim();
+
+            data = {
+                email,
+                subject,
+                text
+            };
+            if(email != "" && validateEmail(email)){
+                
+                $.post('/email',data,function() {
+                   console.log('Server recieved our data');
+               });
+                
+            }
+            else if(email == "" || text == " "){
+                alert("Field is empty");
+            }
+            else{
+                alert(email + "not valid");
+            }
+        });
+    </script>
+    <script >
+        var modal = document.getElementById("myModal");
+        var btn = document.getElementById("myBtn");
+
+        var span = document.getElementsByClassName("close")[0];
+
+        document.getElementById("contact").addEventListener('click',(e) => {
+            modal.style.display = "grid";
+        });
+        span.onclick = function() {
+            modal.style.display = "none";
+
+        }
+        document.getElementById('submit').addEventListener('click',(e) => {
+
+            modal.style.display = "none";            
+        });
+    </script> -->
+</body>
+</html>

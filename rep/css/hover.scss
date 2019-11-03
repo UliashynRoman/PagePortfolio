@@ -1,0 +1,17 @@
+.card{
+    
+    &.hover{ 
+            transition: 1000ms;
+            padding: 5rem;
+            z-index: 1;
+            margin-bottom:5%;
+            background-size:cover;
+            background-position: center;
+    }
+
+    .card p{
+        &.hover{
+            background: var(--msub_color);
+        }
+    }
+}
